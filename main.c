@@ -4,6 +4,24 @@
 #include <string.h>
 #include <ctype.h>
 
+// function to check if it's an image file because it would count it's bytes, so we'll not check it
+int isImageFile(const char *filename) {
+    size_t len = strlen(filename);
+    if (len < 4) return 0;
+
+    if (strcmp(filename + len - 4, ".jpg") == 0 ||
+        strcmp(filename + len - 5, ".jpeg") == 0 ||
+        strcmp(filename + len - 4, ".png") == 0 ||
+        strcmp(filename + len - 4, ".bmp") == 0 ||
+        strcmp(filename + len - 4, ".gif") == 0 ||
+        strcmp(filename + len - 5, ".tiff") == 0 ||
+        strcmp(filename + len - 4, ".webp") == 0) {
+        return 1; 
+    }
+
+    return 0; 
+}
+
 void scanFolder(const char *path, int *fileCount, int *lineCount, int *charCount){
 
     DIR *dir = opendir(path);
@@ -31,7 +49,7 @@ void scanFolder(const char *path, int *fileCount, int *lineCount, int *charCount
 
             snprintf(fullPath, sizeof(fullPath), "%s/%s", path, entry->d_name);
 
-            if(entry->d_type == DT_REG) {
+            if(entry->d_type == DT_REG && !isImageFile(entry->d_name)) {
                 printf("Opening file: %s\n", entry->d_name);
                 (*fileCount)++;
 

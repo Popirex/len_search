@@ -16,6 +16,7 @@ It is designed for anyone who wants a quick overview of a project's size without
 - Ignores hidden files and directories (those starting with `.`)  
 - Counts only regular files  
 - Prints a message every time it opens a folder or file, useful to monitor the analysis  
+- Ignores most common image file extensions.
 
 ---
 
@@ -60,6 +61,7 @@ OR
 ./len_search ~/project
 
 ```
+
 
 Sample output:
 
