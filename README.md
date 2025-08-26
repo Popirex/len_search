@@ -53,6 +53,13 @@ The executable takes as an argument the path of the folder to analyze.
 ./len_search /home/user/project
 
 ```
+OR
+
+```bash
+
+./len_search ~/project
+
+```
 
 Sample output:
 
