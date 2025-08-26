@@ -27,22 +27,36 @@ If you want to compile from source:
 
 gcc -o len_search main.c
 
+```
+
 This will create an executable called len_search.
 
 If you don't use the -o len_search when compiling you'll have a a.out executable.
 
 The repository already includes a compiled executable, so you can skip this step if desired.
 
+---
+
 ## How to Use len_search
 The executable takes as an argument the path of the folder to analyze.
 
+```bash
+
 ./len_search <path_to_folder>
+
+```
 
 - Example
 
+```bash
+
 ./len_search /home/user/project
 
+```
+
 Sample output:
+
+```bash
 
 Opening folder: project
 Opening file: main.c
@@ -54,10 +68,13 @@ Total files: 5
 Total Lines: 230
 Total characters: 4520
 
+```
 
 -Shows each folder and file opened
 
 -Then prints a summary with the total number of files, lines, and characters.
+
+---
 
 ## Notes
 
@@ -67,5 +84,7 @@ Total characters: 4520
 
 - Hidden files (like .git, .vscode) are ignored.
 
+---
+
 ## Creator Note
-- This project was created because i always wonder how big some of my projects are but I'm always too lazy to check each file on it's own, if you have any ideas to make it better, I would love to hear them :)
+- This project was created because I always wonder how big some of my projects are but I'm always too lazy to check each file on it's own, if you have any ideas to make it better, I would love to hear them :)
