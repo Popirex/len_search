@@ -88,6 +88,7 @@ void scanFolder(const char *path, int *fileCount, int *lineCount, int *charCount
             else if(entry->d_type == DT_DIR){
 
                 printf("Opening folder: %s\n", entry->d_name);
+
                 //if it's a folder, recursively search inside of it
                 scanFolder(fullPath, fileCount, lineCount, charCount);
             }
@@ -104,8 +105,32 @@ int main(int argc, char* argv[]) {
 
 
     if(argc < 2) {
-        printf("Usage: %s path/to/check\n", argv[0]);
+        printf("\n");
+        printf("If you need any help use the following command:\n");
+        printf("%s -h\n", argv[0]);
+        printf("OR\n");
+        printf("%s --help\n", argv[0]);
+        printf("\n");
         exit(0);
+    }
+
+
+    if(strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0){
+        printf("\n");
+        printf("You asked for help, and I'm here to rescue you!\n");
+        printf("This script is very simple to use, but if you notice some errors, please let me know on GitHub!\n");
+        printf("Here is the link of my GitHub repo: https://github.com/Popirex/len_search \n");
+        printf("\n");
+        printf("*HOW TO USE*\n");
+        printf("\n");
+        printf("%s ~/path/to/check\n",argv[0]);
+        printf("\n");
+        printf("OR\n");
+        printf("\n");
+        printf("%s /home/user/path/to/check\n",argv[0]);
+        printf("\n");
+        exit(0);
+
     }
 
     int totalFiles = 0;
