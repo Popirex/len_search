@@ -20,6 +20,21 @@ It is designed for anyone who wants a quick overview of a project's size without
 
 ---
 
+## Help
+
+    If you still struggle to use it, I added a "help command", here you can see it:
+    ```bash
+
+    ./len_search -h
+
+    OR
+
+    ./len_search --help
+
+    ```
+
+---
+
 ## How to Compile
 
 If you want to compile from source:
@@ -92,6 +107,18 @@ Total characters: 4520
 - Character count excludes spaces, tabs, and newlines to provide a more "accurate" measure of actual code.
 
 - Hidden files (like .git, .vscode) are ignored.
+
+---
+
+## Used libraries
+
+```bash
+#include <stdio.h>
+#include <stdlib.h>
+#include <dirent.h>
+#include <string.h>
+#include <ctype.h>
+```
 
 ---
 
