@@ -22,7 +22,9 @@ It is designed for anyone who wants a quick overview of a project's size without
 
 ## Help
 
-    If you still struggle to use it, I added a "help command", here you can see it:
+- If you still struggle to use it, I added a "help command", here you can see it:
+
+
     ```bash
 
     ./len_search -h
